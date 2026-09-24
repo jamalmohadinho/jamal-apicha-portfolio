@@ -1,0 +1,261 @@
+﻿/* Shared colors keep every section and card on the same page background. */
+:root {
+  --page-bg: #111827;
+  --experience-text: #ffffff;
+  --text-primary: #e9edf4;
+  --text-secondary: #b6c4d6;
+  --text-muted: #9cacc0;
+  --theme-border: #35465d;
+  --control-bg: #202d40;
+  --control-hover: #2c3d55;
+  --accent: #67e8f9;
+  --accent-blue: #77acff;
+  --highlight-green: #4ade80;
+  --highlight-yellow: #facc15;
+  --highlight-purple: #c4a0ff;
+  --highlight-cyan: #67e8f9;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background: var(--page-bg);
+}
+
+:root[data-theme='light'] {
+  --page-bg: #ffffff;
+  --experience-text: #000000;
+  --text-primary: #172033;
+  --text-secondary: #36465d;
+  --text-muted: #52637b;
+  --theme-border: #cbd5e1;
+  --control-bg: #eef2f7;
+  --control-hover: #e2e8f0;
+  --accent: #08758a;
+  --accent-blue: #225bc4;
+  --highlight-green: #15763b;
+  --highlight-yellow: #8a5800;
+  --highlight-purple: #7540b8;
+  --highlight-cyan: #08758a;
+  color-scheme: light;
+}
+
+body,
+.site-header,
+.home-introduction,
+.home-photo-frame,
+.surface,
+.project-card,
+.skills-panel,
+.home-skills .skills-panel,
+.experience-card,
+.contact-card {
+  background: var(--page-bg);
+  color: var(--text-primary);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--theme-border);
+}
+
+.contact-card,
+.project-card,
+.surface {
+  border-color: var(--theme-border);
+}
+
+.about-grid,
+.footer,
+.mobile-nav,
+.experience-content {
+  border-color: var(--theme-border);
+}
+
+h1,
+h2,
+h3,
+.home-introduction p,
+.desktop-nav,
+.menu-toggle,
+.contact-column h3,
+.contact-card-title,
+.project-card .text-white {
+  color: var(--text-primary);
+}
+
+.home-introduction h1,
+h2 span,
+.eyebrow,
+.home-contact,
+.desktop-nav a.is-active,
+.desktop-nav a:hover,
+.project-card .text-cyan-300,
+.skills-panel .text-cyan-200 {
+  color: var(--accent);
+}
+
+.about-copy p,
+.experience-contributions,
+.contact-introduction,
+.technology-badge,
+.project-card .text-slate-300,
+.surface .text-slate-300 {
+  color: var(--text-secondary);
+}
+
+.section-heading > p:last-child:not(.eyebrow),
+.about-facts span,
+.footer p,
+.footer > a:last-child,
+.experience-location,
+.contact-card-detail,
+.project-card .text-slate-400,
+.skills-panel .text-slate-300,
+.skills-panel .text-slate-400,
+.surface .text-slate-400 {
+  color: var(--text-muted);
+}
+
+.secondary,
+.technology-badge,
+.tech-tag,
+.text-tag,
+.experience-tags .text-tag,
+.experience-initials,
+.experience-tabs,
+.skills-panel [role='tablist'] {
+  color: var(--text-secondary);
+  background: var(--control-bg);
+  border-color: var(--theme-border);
+}
+
+.secondary:hover,
+.experience-tabs button:hover,
+.skills-panel [role='tab']:hover {
+  background: var(--control-hover);
+}
+
+.experience-tabs button,
+.tech-tag svg,
+.technology-badge svg {
+  color: var(--accent);
+}
+
+.experience-tabs button[aria-selected='true'],
+.skills-panel [role='tab'][aria-selected='true'],
+.primary {
+  color: #08202b;
+  background: #67e8f9;
+}
+
+.primary:hover {
+  color: #08202b;
+  background: #a5f3fc;
+}
+
+.experience-card {
+  --experience-accent: var(--accent-blue);
+}
+
+.experience-card--covermymeds,
+.experience-card--minorities {
+  --experience-accent: #ff9cab;
+}
+
+.experience-card--chase,
+.experience-card--colorstack {
+  --experience-accent: var(--highlight-purple);
+}
+
+[data-theme='light'] .experience-card--covermymeds,
+[data-theme='light'] .experience-card--minorities {
+  --experience-accent: #a51d31;
+}
+
+.contact-card[href^='mailto:'] .contact-card-detail,
+.contact-card[href^='tel:'] .contact-card-detail {
+  color: var(--accent-blue);
+}
+
+.contact-card-link:hover,
+.contact-card-link:focus-visible {
+  background: var(--page-bg);
+  border-color: var(--accent);
+}
+
+[data-theme='light'] .site-name {
+  background-image: linear-gradient(110deg, #08758a, #225bc4);
+}
+
+.about-copy .about-name,
+.about-copy .about-event {
+  color: var(--accent-blue);
+}
+
+.about-copy [data-technology='Python'],
+.about-copy [data-technology='Node.js'] {
+  color: var(--highlight-green);
+}
+
+.about-copy [data-technology='JavaScript'] {
+  color: var(--highlight-yellow);
+}
+
+.about-copy [data-technology='Express.js'] {
+  color: var(--highlight-purple);
+}
+
+.about-copy [data-technology='React'] {
+  color: var(--highlight-cyan);
+}
+
+.theme-toggle {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--theme-border);
+  border-radius: 50%;
+  background: var(--page-bg);
+  color: var(--text-primary);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  background: var(--control-bg);
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline-color: var(--accent);
+}
+
+@media (max-width: 1100px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
+  }
+
+  .nav-inner {
+    gap: 12px;
+  }
+}
+
+.experience-card-header h3,
+.experience-company,
+.experience-date,
+.experience-location,
+.experience-contributions {
+  color: var(--experience-text);
+}
+
+[data-theme='dark'] .experience-certificate {
+  color: #67e8f9;
+}
