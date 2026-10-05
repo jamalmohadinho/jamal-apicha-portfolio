@@ -142,15 +142,6 @@ export const skills = {
 
 export const projects = [
   {
-    title: "Split the Bill",
-    subtitle: "SHARED TRIP EXPENSES",
-    description:
-      "A web development class project for organizing trips and shared expenses. Users can sign up, log in, manage trips and participants, and record expenses with amounts, categories, and who paid, backed by a relational database.",
-    stack: ["Ruby", "Ruby on Rails", "SQLite", "HTML", "CSS"],
-    github: "https://github.com/jamalmohadinho/split-the-bill",
-    live: null,
-  },
-  {
     title: "Memories App",
     subtitle: "PHOTO SHARING APP",
     description:
@@ -193,6 +184,15 @@ export const projects = [
     stack: ["JavaScript", "HTML", "CSS"],
     github: "https://github.com/jamalmohadinho/Meme-Generator-Project",
     live: "https://meme-generator-project-two.vercel.app/",
+  },
+  {
+    title: "Split the Bill",
+    subtitle: "SHARED TRIP EXPENSES",
+    description:
+      "A web development class project for organizing trips and shared expenses. Users can sign up, log in, manage trips and participants, and record expenses with amounts, categories, and who paid, backed by a relational database.",
+    stack: ["Ruby", "Ruby on Rails", "SQLite", "HTML", "CSS"],
+    github: "https://github.com/jamalmohadinho/split-the-bill",
+    live: null,
   },
   {
     title: "Tic-Tac-Toe",
